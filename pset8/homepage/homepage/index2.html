@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" html lang="en" xml:lang="en">
+    <head>
+        <title>Pharmacokinetics Concepts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class = "navbar navbar-expand-md bg-dark navbar-dark">
+        <a class = "navbar-brand" href="index.html"> CS50 Final Project</a>
+
+        <!-- navigates to the home page-->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+        </nav>
+
+        <div class="container mt-3">
+            <h2 class = "color">
+               Distribution
+            </h2>
+            <h3>
+                Rate of Distribution
+            </h3>
+            <p>
+                Rate of Distribution undergoes either perfusion rate limited or permeability rate limited.
+            </p>
+            <h4>
+                Perfusion rate limited
+            </h4>
+            <p>
+                Perfusion rate limited occurs when the tissue membrane does not present as a barrier to distribution. Different organs have different perfusion rate. Lungs has the highest perfusion rate followed by the kidney, brain, liver, fat and muscle (at resting state). In order for drugs to experience perfusion rate limited distribution, the drug have to be relatively small and lipophilic. Perfusion is the defined as the volume of blood that is perfusing a unit of tissue per unit time\(,mL.min^{-1}.g^{-1}\).
+                If the density of tissue(\(g.mL^{-1}\)) is known, perfusion can be expressed as \(mL.min^{-1}.mL^{-1}\) of tissue.
+            </p>
+            <p class>
+                Distribution rate constant,\(K_T\) = <span class= "enlarge">\(\frac{\frac{Q}{V_T}}{K_{Pb}}\)</span>
+            </p>
+            <br>
+            <p>
+                Distribution half-life, \(t_{1/2}\) = <span class = "enlarge">\(\frac{ln 2}{K_T}\)</span> = <span class = "enlarge">\(\frac{ln 2.K_{Pb}}{\frac{Q}{V_T}}\)</span>
+            </p>
+            <p>
+                where \(Q\) = blood flow, \(V_T\) = Volume of tissue, \(K_{Pb}\) = Tissue-to-blood equilibrium distribution ratio = <span class = "enlarge">\(\frac{C_T}{C_b}\)</span>, \(C_T\) = drug concentration in tissue, \(C_b\) = drug concentration in blood,<span class = "enlarge">\(\frac{Q}{V_T}\)</span>= Perfusion rate of tissue
+            </p>
+            <h4>
+                Permeability rate limited
+            </h4>
+            <p>
+                Permeability rate limited occurs when drug has difficulty to pass through tissue membrane as tissue membrane present as a barrier to distribution. Factors affecting distribution of tissue depends on the size and polarity of drug and also the membrane poperties (capillaries in Blood Brain Barrier, lung, etc)
+            </p>
+            <h3>
+                Physiological Volume of Distribution
+            </h3>
+            <p>
+                For a 70kg human body:
+                <ul>
+                    <li>Plasma Volume = 3L</li>
+                    <li>Blood Volume = 6L</li>
+                    <li>Interstitial Fluid Volume = 12L</li>
+                    <li>Intracellular Volume = 27L</li>
+                    <li>Total Body Water Volume = 42L</li>
+                </ul>
+
+            </p>
+            <h3>
+                Apparent Volume of Distibution
+            </h3>
+            <p>
+                Apparent Volume of Distribution of drug is the volume that the drug seems to distribute to account for its plasma concentration.
+                The physiological volume of water in a 70kg man is 42L.
+                However, as the drug does not exist as free unbound form in the water compartment they may bind to solid constituent to tissue like membrance, adipose, tissue protein. This results in the volume of distribution exceeding the physiological volume of 42L. Hence, this is known as the apparent volume of distribution instead of physiological volume of distribution.
+                This is infact true for many drugs where the volume of distribution is much higher than 42L.An example is Chlorpromazine which has a volume of distribution of 1190L for a 70kg man.
+            </p>
+            <br>
+            <h3>
+                Derivation of Gilbaldi and McNamara Model
+            </h3>
+            <br>
+            <p>
+                \(V = V_P + V_T \times K_P\)
+            </p>
+            <p>
+                where V = Apparent Volume of distribution, \(V_P\) = Volume of plasma = 3L, \(V_T\) = Volume of tissue = 42L - 3L = 39L, \(K_P\) = \(\frac{C_T}{C}\) = Tissue to plasma equilibrium distribution ratio
+                (Note: Do not get confused \(K_P\) is tissue to plasma equilibrium distribution ratio while \(K_{Pb}\) is tissue-to-blood equilibrium distribution ratio)
+            </p>
+            <p>
+                As \(K_P\) = \(\frac{C_T}{C}\), we can re-express the equation as:
+                \(V = V_P + V_T \times \frac{C_T}{C}\) [eqn 1]
+
+            </p>
+            <p>
+                Fraction unbound of drug in plasma, \(f_U\) = \(\frac{C_U}{C}\) [eqn 2], where \(C_U\) is the concentration of drug unbound in plasma and \(C\) is the total concentration of drug unbound and bound in plasma
+            </p>
+            <p>
+                Fraction unbound of drug in tissue = \(f_{UT}\) = \(\frac {C_{UT}}{C_T}\) [eqn 3], where \(C_{UT}\)  = Concentration of drug unbound in tissue, \(C_T\) = Concentration of drug bound and unbound in tissue
+            </p>
+            <p>
+                Substituting eqn 2 & 3 into eqn 1 :
+                 \(V = V_P + V_T \times \frac{f_U}{f_{UT}}\)
+                 This equation is also known as Gilbaldi and McNamara Model. One limitation of Gilbaldi and McNamara Model is that it can only be used for estimating large instead of small volume of distribution drugs.
+
+            </p>
+            <h3>
+                Oie and Tozer Model
+            </h3>
+            <p>
+                Another model that was came out much later after the Gilbaldi and McNamara Model is the Oie and Tozer Model.This model is used to account for albumin and other plasma proteins that are present not just in the plasma compartment but also present in the interstitial space. This model is useful for drugs that binds
+                very strongly to albumin and plasma protein and has a very small volume of distribution meaning it tends to remain in the plasma compartment. If we use the Gilbaldi and McNamara model, it may estimate the volume of distribution is this case inaccurately and incorrectly. Hence, this model comes in handy when estimatingcs small and large volume of distribution drugs.
+
+            </p>
+            <p>
+                 V = 7.5 + (7.5 + \(\frac{V_R}{f_{UR}})\times f_U\)
+            </p>
+            <p>
+                where V = volume of distribution, \(V_R\) = Aqueous Volume of intracellular fluid which drug distributes in, \(f_{UR}\) = Apparent Fraction unbound in the intracellular fluids,\(f_U\) = fraction unbound in plasma
+            </p>
+
+              <ul class="pagination justify-content-end" style="margin:50px 0">
+                  <li class="page-item"><a class="page-link" href="index.html">Previous</a></li>
+                  <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+                  <li class="page-item active"><a class="page-link" href="index2.html">2</a></li>
+                  <li class="page-item"><a class="page-link" href="index3.html">3</a></li>
+                  <li class="page-item"><a class="page-link" href="index4.html">4</a></li>
+                  <li class="page-item"><a class="page-link" href="index3.html">Next</a></li>
+
+            </ul>
+        </div>
+    </body>
+</html>

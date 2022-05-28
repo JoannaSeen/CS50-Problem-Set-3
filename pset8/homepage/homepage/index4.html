@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" html lang="en" xml:lang="en">
+    <head>
+        <title>Pharmacokinetics Concepts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class = "navbar navbar-expand-md bg-dark navbar-dark">
+        <a class = "navbar-brand" href="index.html"> CS50 Final Project</a>
+
+        <!-- navigates to the home page-->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+        </nav>
+        <div class="container mt-3">
+            <h2 class = "color">
+               Elimination
+            </h2>
+            <h2>
+                Renal Physiology
+            </h2>
+            <p>
+                Blood enters the kidney through the renal artery at flow rate of 1100mL/min, which then further divides into many branches, known as the afferent arteriole. The afferent arteriole then divides further to give rise to a capillary network known
+                as glomerulus, which then reunites to form the efferent arteriole. There is a Bowman's Capsule also known as Glomerular Capsule is a double walled epithelial membrane that surrounds the glomerular capillaries.
+                Water and small dissolved substances leaves the capillaries fernestration and goes through the Bowmwn's capsule through a process known as glomerular filtration. After that, water and these dissolved substances passes through the proximal distal tubule, then to the descending loop of
+                Henle, through the ascending loop of Henle, to the distal convoluted tubule and finally through the collecting tubule which is then passed out as urine.
+            </p>
+            <br>
+            <div class="text-center">
+
+                    <!----reference: https://www.sciencedirect.com/science/article/pii/B9780128142769000301-->
+                    <img src = "renal phy.png" class="rounded" style="width:42%" alt "Picture of kidney nephron">
+
+            </div>
+            <br>
+            <p>
+                There are a total of three processes, Glomerular filtation (GFR), Tubular reabsorption and Tubular secretion involved in the clearance of the drug via renally.
+                Glomerular filtration forces water and unbound dissolved drug substances through the Bowman's capsule into the renal tubule. The drug may undergo tubular secretion, mainly in the
+                proximal tubule, where the drug passes from the bloodstream and enters into the renal tubule. The drug may also undergo tubular reabsorption where it moves from the renal tubule back into the
+                bloodstream through the numerous capillaries surrounding the renal tubule. According to how the anatomy of the kidney, glomerular filtration occurs first, followed by tubular secretion and tubular reabsorption.
+            </p>
+            <br>
+            <div class="text-center">
+                    <!----reference: https://www.sciencedirect.com/science/article/pii/B9780128142769000301-->
+                    <img src = "three processes.png" class="rounded" style="width:30%" alt "Picture of three essential processes occuring in the kidney nephron">
+            </div>
+            <br>
+            <p>
+                Rate of excretion = (\(1-F_R) \times\) [Rate of filtration + Rate of secretion], where \(F_R\) = fraction of drug that is reabsorbed
+            </p>
+            <p>
+                Recall : Rate of elimination = \(CL\times C\), Rate of filtration = \(CL_f \times C\), Rate of secretion = \(CL_s \times C\)
+            </p>
+            <p>
+                Renal clearance, \(CL_R\) = \(\frac{(1-F_R)}{C} \times\) [Rate of filtration + Rate of secretion] [eqn 1]
+            </p>
+            <p> Simplifying eqn 1:
+                \(CL_R\) = \((1-F_R) \times\) (\(CL_f + CL_s\))
+            <h2>
+                 Glomerular filtration
+            </h2>
+            <p>
+                Rate of filtration(mg/min) = GFR(mL/min) x \(C_u\)(mg/mL)
+            </p>
+            <p>
+                Since fraction unbound in plasma, \(f_u\) = \(\frac {C_u}{C}\), where \(C_u\) = concentration of the drug unbound in the plasma and \(C_u\) = total concentration of unbound and bound drug in plasma
+            </p>
+            <p>
+                Rate of filtration = \(f_u \times\) GFR \(\times\) \(C\)
+            </p>
+            <p>
+                \(CL_f\) = \(\frac{1}{C}\times \) Rate of filtration = \(f_u \times\) GFR
+            </p>
+            <br>
+
+            <h2>
+                Tubular Secretion
+            </h2>
+            <p>
+                Tubular secretion is inferred if renal clearance (\(CL_R\)) is greater than filtration clearance (\(CL_f\) = \(f_u \times\) GFR). Note: We cannot however conclude that tubular reabsorption did not occur. We can only conclude that if tubular reabsorption did occur, it will be less than secretion such that the renal clearance will be much greater than filtration clearance.
+            </p>
+            <br>
+            <h2>
+                Tubular Reabsorption
+            </h2>
+            <p>
+                Tubular reabsorption is inferred if renal clearance (\(CL_R\)) is lesser than filtration clearance (\(CL_f\) = \(f_u \times\) GFR).
+                Note: We cannot however conclude that tubular secretion did not occur.
+                We can only conclude that if tubular secretion did occur, it will be less than reabsorption such that the renal clearance will be much lesser than filtration clearance.
+            </p>
+            <p class = "bold">
+                The degree of passive reabsorption depends on:
+                <ul>
+                    <li class = "change">Size of drug molecule</li>
+                    <li class = "change">Lipophilicity (log P) of drug molecule</li>
+                    <li class = "change"> State of ionisation of drug (pKa)</li>
+                    <li class = "change"> Urine flow</li>
+                    <li class = "change"> Urine pH</li>
+
+                </ul>
+            </p>
+
+
+
+
+            <ul class="pagination justify-content-end" style="margin:50px 0">
+              <li class="page-item"><a class="page-link" href="index3.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="index3.html">3</a></li>
+              <li class="page-item active"><a class="page-link" href="index4.html">4</a></li>
+              <li class="page-item disabled"><a class="page-link" href="index2.html">Next</a></li>
+            </ul>
+    </body>
+</html>

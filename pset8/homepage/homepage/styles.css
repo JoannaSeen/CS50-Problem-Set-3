@@ -1,0 +1,73 @@
+/*tags selector*/
+body
+{
+    text-align:justify;
+    background-color: #FFEBCD;
+    user-select: text;
+    padding-bottom:0.01px;
+    padding-top:0.01px;
+
+}
+/*element within the <li> which has this class = "change"*/
+
+li.change
+{
+    color: #000080;
+}
+
+/*element within the <p> which has this class ="bold" selector*/
+p.bold
+{    font-weight: bold;
+     color: #000080;
+     user-select: text;
+     padding-top:0.01px;
+     background-color: #FFEBCD;
+}
+/*class selector*/
+.center
+{
+    text-align: center;
+    padding-bottom: 0.01px;
+    user-select: text;
+    padding-top:0.01px;
+    background-color: #FFEBCD;
+}
+/*class selector*/
+.enlarge
+{
+    font-size: 1.5em;
+    padding-bottom: 0.01px;
+    padding-top:0.01px;
+    text-align:justify;
+    background-color: #FFEBCD;
+}
+/*id selector*/
+#blue
+{
+    color: blue;
+    padding-bottom: 0.01px;
+    padding-top:0.01px;
+    text-align:justify;
+    background-color: #FFEBCD;
+}
+/*class selector*/
+.color
+{
+    color :#800517;
+    padding-bottom: 0.01px;
+    padding-top:0.01px;
+    text-align:justify;
+    background-color: #FFEBCD;
+}
+
+/* Grouping selector */
+p,h3
+{
+    padding-bottom: 0.01px;
+    padding-top:0.01px;
+    text-align:justify;
+    background-color: #FFEBCD;
+}
+
+
+

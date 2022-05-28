@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" html lang="en" xml:lang="en">
+    <head>
+        <title>Pharmacokinetics Concepts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="styles.css" rel="stylesheet">
+    </head>
+       <body>
+        <nav class = "navbar navbar-expand-md bg-dark navbar-dark">
+        <a class = "navbar-brand" href="index.html"> CS50 Final Project</a>
+
+        <!-- navigates to the home page-->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+        </nav>
+        <div class="container mt-3">
+            <h2 class = "color">
+               Elimination
+            </h2>
+            <p>
+                Elimination comprises of excretion and metabolism. Note: When we mention about the term elimination, we are referring to the parent drug that have been metabolised or excreted, we are not talking about the metabolite of the parent drug. Once the metabolite of the parent drug is formed, it is considered that the parent drug have been eliminated.
+                The main organs involved in excretion include kidney (renal system) and the biliary system. The main organ involved in metabolism includes liver (hepatic system). Here we will be focusing more on the hepatic and renal system that plays a role in the clearance of the drug from the body.
+            </p>
+            <h2>
+                Clearance Concept
+            </h2>
+            <p>
+                Rate of elimination = \(CL \times C\) = \(Q \times (C_A - C_V\))
+            </p>
+            <p>
+                where \(Q\) = blood flow, \(C_A\) = arterial blood drug concentration, \(C_V\) = venous blood drug concentration, C = plasma drug concentration
+            </p>
+            <p>
+                Since \(CL_b\) = \(\frac {Q \times (C_A - C_V) }{C_A}\) [eqn 1], and Extraction Ratio, E = \(\frac {(C_A - C_V) }{C_A}\) [eqn 2], substituting eqn 1 into eqn 2 : \(CL_b\)  = \(Q \times E\)
+            </p>
+            <br>
+            <h2>
+                Extraction Ratio (E)
+            </h2>
+            <p>
+                Extraction Ratio are categorized into three categories, high, intermediate and low extraction ratio. High extraction ratio is defined as having an E of > 0.7. Intermediate extraction ratio is defined as having an E of >0.3 and
+                &lt0.7. Low extraction ratio is defined as E of &lt0.3. Note: To obtain the Extraction ratio (E), we must use the \(CL_b\), which is the blood clearance instead of \(CL\), which is the plasma clearance, as we are dealing with the term\(Q\), which is blood flow.
+                To convert from \(CL\) to \(CL_b\), we can use this formula, \(CL_b = CL \times \frac{C}{C_b}\).
+            </p>
+            <h2>
+                Relationship between CL and V (\(CL = V \times k\))
+            </h2>
+            <p>
+                Total Plasma Clearance = Hepatic Clearance (\(CL_H\)) + Renal Clearance (\(CL_R\)) + Clearance by other organs (\(CL_{others}\))
+            </p>
+            <p>
+                Since rate of elimination = \(CL\times C\) and C = \(\frac{A}{V}\) (A = Amount of drug, V = Volume of distribution) , we can re-express rate of elimination = \(\frac{CL}{V}\times A\) [eqn 3]
+            </p>
+            <p>
+                Rate of elimination = \(k\times A\) [eqn 4].
+            </p>
+            <p>
+                Combining eqn 3 and 4 : \(CL = V \times k\), where k = elimination rate constant, V = Volume of distribution
+            </p>
+            <p>
+                Elimination half-life, \(t_{1/2}\) = \(\frac{0.693V}{CL}\)
+            </p>
+            <p>
+                Note : The Volume of distribution and Clearance variables are independent of each other. Factors affecting volume of distribution, V, recall the terms in the Gilbaldi and McNamara model and Oie and Tozer Model? Factors affecting clearance CL, we will be focusing on it further in this particular section.
+            </p>
+            <h2>
+                Hepatic Clearance
+            </h2>
+            <br>
+             <div class="text-center">
+                    <img src = "Blood Supply.png" class="rounded" style="width:40%" alt "Picture of blood supply">
+            </div>
+            <br>
+            <p>
+                To understand hepatic clearance, we need to understand the anatomy of the liver and its blood flow. There are two blood supply going into the liver from the portal vein(blood flow = 1050mL/min) and the hepatic artery(blood flow = 300mL/min).
+                Drugs and food after being absorbed from the small intestine and the stomach enters into the bloodstream where the portal vein is in charge of chanelling the blood supply from GIT to the liver.
+                Hence, the total blood flow going into the liver is an addition of the blood flow from the portal vein and hepatic artery, 1350mL/min.
+                The hepatic vein will then bring the blood flowing into the liver out of the liver with a blood flow of 1350mL/min.
+                There are two important processes that can occur when drug enters the liver which is the eliminating organ.
+                Drug can be hepatically cleared due to metabolism via metabolizing enzymes (eg. CYP3A4, CYP1A2, etc.) and excretory processes via biliary system. This is known as the intrinsic clearance of the drug via the hepatic system, \(CL_{int}\).
+                Parent drug that is hepatically cleared by the metabolizing enzyme is expressed as \(CL_{int, m}\) while parent drug that is hepatically cleared by the biliary system through excretion is expressed as \(CL_{int, ex}\).
+            </p>
+            <br>
+            <h3>
+                Integration of Michaelis Menten Kinetics Concept
+            </h3>
+            <p>
+                We can link the concept of intrinsic clearance of the drug via the liver into the Michaelis Menten concept. Michalis-Menten Model is used to describe the rate of reaction at which the enzyme is catalyzing the substrate converting into products.
+                The Michaelis Menten equation is expressed as v = \(\frac{V_{max}\times[S]}{K_m + [S]}\), where \(V\)= Rate of reaction, \(V_{max}\) = Maximum rate of reaction, \([S]\) = Substrate concentration, \(K_m\) = Michaelis constant
+            </p>
+            <div class="text-center">
+                    <img src = "Michaelis Menten.png" class = "rounded" style = "width: 50%" alt "Michaelis Menten graph">
+            </div>
+            <p>
+                When the \([S]\) is much smaller than \(K_m\), the Michealis Menten equation can be re-expressed as \(V = \frac{V_{max}}{K_m}\times[S]\) [eqn 5].
+            </p>
+            <p>
+                Rate of elimination = \(CL\times C\) [Eqn 6]
+            </p>
+            <p>
+                Comparing Eqn 5 and Eqn 6 :
+                \(CL_{int} = \frac{V_{max}}{K_m}\)
+            </p>
+            <p>
+
+                Further simplifiying the equation, we can obtain the equation, \(CL_{int} = \sum CL_{int,m} + \sum CL_{int,ex} = \frac{V_{max}}{K_m}\)
+            </p>
+            <h2>
+                High Extraction ratio Drug (>0.7)
+            </h2>
+            <p>
+                For drugs that are highly extracted by the liver, (E \(\approx\) 1), (\(CL_{b,h}\)  = \(Q \times E\)) can be simplified to \(CL_{b,h} \approx Q\approx 1350mL/min\). This means that hepatic blood clearance is dependent on hepatic blood blood flow only.
+                Note: The maximum hepatic blood clearance is limited by the blood flowing to the liver, which means that hepatic clearance is perfusion rate limited.
+                Drugs that have high extraction ratio are relatively insensitive to changes in plasma protein binding (\(f_U\) = fraction of drug unbound in plasma) and hepatocellular eliminating activity (also known as intrinsic clearance \(CL_{int}\)).
+
+            </p>
+            <br>
+            <h2>
+                Intermediate Extraction ratio Drug (> 0.3 and &lt0.7)
+            </h2>
+            <p>
+                For intermediately extracted drugs, they are sensitive to changes in plasma protein binding (\(f_U\)), hepatocellular eliminating activity (\(CL_{int}\)) and hepatic blood flow (\(Q\)).
+                However, the extent of effect due to changes in these factors are far less than that experienced by the the high and low extraction ratio drug.
+            </p>
+            <h2>
+                Low Extraction ratio Drug (&lt 0.3)
+            </h2>
+            <p>
+                For low extraction ratio drugs, they are sensitive to changes in changes in plasma protein binding (\(f_U\)) and hepatocellular eliminating activity
+                (\(CL_{int}\)).
+                They are affected to much greater extent when there is changes in these two factors as mentioned above as compared to intermediately extracted drugs.
+                They are also relatively insensitive to changes in hepatic blood flow (\(Q\)).
+            </p>
+            <br>
+            <h2>
+                Well-Stirred Model
+            </h2>
+            <p>
+                Using the well-stirred model will help us better understand the factors that affects high, intermediate and low extraction ratio drugs.
+            </p>
+            <p>
+                Equation for the well-stirred model :
+                \(CL_{b,H}\) = \(Q_H \times E_H\) = \(Q_H \times \frac{f_{ub} \times CL_{int}}{Q_H + f_{ub}\times CL_{int}}\)
+            </p>
+            <br>
+
+            <h4>
+                High extraction ratio Drug
+            </h4>
+            <p>
+                For high extraction ratio drug, \(f_{ub}\times CL_{int}\) is much greater than \(Q_H\), so the \(Q_H\) term in the donminator can be removed and the equation can be simplified to
+                : \(CL_{b,H}\) = \(Q_H\). From this equation, we can observe that for high extraction ratio drug, it is affected by only hepatic blood flow (\(Q_H\)).
+            </p>
+            <br>
+            <h4>
+                Intermediate extraction ratio Drug
+            </h4>
+            <p>
+                For intermediate extraction ratio drug, it is affected by all three factors in the well-stirred model, \(f_{ub}\), \(CL_{int}\) and \(Q_H\).
+            </p>
+            <br>
+            <h4>
+                Low extraction ratio Drug
+            </h4>
+            <p>
+                For low extraction ratio drug, \(f_{ub}\times CL_{int}\) is much smaller than \(Q_H\), so the \(f_{ub}\times CL_{int}\) terms in the denominator can be removed and the equation can be simplified to
+                : \(CL_{b,H} = f_{ub} \times CL_{int}\). We can observe that from this equation, the low extraction ratio drug is affected by only both \(f_{ub}\) and \(CL_{int}\).
+            </p>
+            <br>
+            <ul class="pagination justify-content-end" style="margin:50px 0">
+              <li class="page-item"><a class="page-link" href="index2.html">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="index2.html">2</a></li>
+              <li class="page-item active"><a class="page-link" href="index3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="index4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="index4.html">Next</a></li>
+            </ul>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<main class="container p-5">
+    <table class="table table-striped">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>TOTAL</th>
+        </tr>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row['symbol'] }}</td>
+                <td>{{ row['name'] }}</td>
+                <td>{{ row['sum_shares'] }}</td>
+                <td>${{ row['price'] }}</td>
+                <td>${{ row['total'] }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>Cash</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>${{ total }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>${{ final_total }}</b></td>
+        </tr>
+    </table>
+</main>
+{% endblock %}
